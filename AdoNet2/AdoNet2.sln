@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonList", "PersonList\Pe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{37C7A9ED-2C6D-4370-9BAE-AF90D2E09EB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{5DC75210-0307-42D0-9246-225F626847B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{37C7A9ED-2C6D-4370-9BAE-AF90D2E09EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37C7A9ED-2C6D-4370-9BAE-AF90D2E09EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37C7A9ED-2C6D-4370-9BAE-AF90D2E09EB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DC75210-0307-42D0-9246-225F626847B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DC75210-0307-42D0-9246-225F626847B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DC75210-0307-42D0-9246-225F626847B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DC75210-0307-42D0-9246-225F626847B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
