@@ -44,9 +44,27 @@ namespace DataAccessLayer
 
         public static List<Person> GetPersonForListBox(string name)
         {
-            //TODO: Verileri al, Liste olarak geri dön. DataReader ile
+            SqlCommand cmd = new SqlCommand("SELECT_PERSON", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Name", name);
 
-            return null;
+            List<Person> persons = new List<Person>();
+            connection.Open();
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+
+            while (sdr.Read())
+            {
+                Person p = new Person();
+                p.FirstName = sdr["FirstName"].ToString();
+                //TODO: diğer alanlarıda doldur
+
+                persons.Add(p);
+            }
+
+            connection.Close();
+
+            return persons;
         }
     }
 }
