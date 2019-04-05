@@ -22,6 +22,9 @@ namespace PersonList
         {
             DataTable dt = DataContext.GetPersons(string.Empty);
             dataGridView1.DataSource = dt;
+
+            var persons = DataContext.GetPersonForListBox(string.Empty);
+            listBox1.DataSource = persons;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -29,7 +32,9 @@ namespace PersonList
             DataTable dt = DataContext.GetPersons(textBox1.Text.Trim());
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = dt;
-            
+
+            //TODO: burayada listboxu ekle
+
         }
     }
 }
