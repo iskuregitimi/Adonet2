@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -50,6 +51,31 @@ namespace DataAccessLayer
             dt.Load(dr);
             connect.Close();
             return dt;
+        }
+
+        public static List<Person> GetPersonForListBox(string name)
+        {
+            //TODO: Verileri al, Liste olarak geri dön. DataReader ile
+            connect.Open();
+            SqlCommand cmd = new SqlCommand("SELECT_PERSON", connect);
+            cmd.Parameters.AddWithValue("@Name", name);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataReader dr = cmd.ExecuteReader();
+            List<Person> isimler = new List<Person>();
+            while (dr.Read())
+            {
+                Person person = new Person();
+                person.BusinessEntityId =Convert.ToInt32(dr["BusinessEntityId"]);
+                person.FirstName=  dr["FirstName"].ToString();
+                person.MiddleName = dr["MiddleName"].ToString();
+                person.LastName = dr["LastName"].ToString();
+                person.PersonType = dr["PersonType"].ToString();
+
+                isimler.Add(person);
+            }
+            dr.Close();
+            connect.Close();
+            return isimler;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,8 @@ namespace PersonList
             DataTable dt = DataContext.GetPersons("");
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = dt;
+            List<Person> person = DataContext.GetPersonForListBox("");
+            listBox1.DataSource=person;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -31,6 +34,9 @@ namespace PersonList
             string name = textBox1.Text;
             DataTable dt = DataContext.GetPersons(name);
             dataGridView1.DataSource = dt;
+            List<Person> person = DataContext.GetPersonForListBox(name);
+            listBox1.DataSource=person;
+
 
         }
     }

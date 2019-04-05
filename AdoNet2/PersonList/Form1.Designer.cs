@@ -48,7 +48,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(285, 354);
+            this.dataGridView1.Size = new System.Drawing.Size(562, 403);
             this.dataGridView1.TabIndex = 0;
             // 
             // textBox1
@@ -58,23 +58,23 @@
             this.textBox1.Location = new System.Drawing.Point(10, 11);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(618, 20);
+            this.textBox1.Size = new System.Drawing.Size(905, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(300, 42);
+            this.listBox1.Location = new System.Drawing.Point(587, 42);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(324, 355);
+            this.listBox1.Size = new System.Drawing.Size(324, 407);
             this.listBox1.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 406);
+            this.ClientSize = new System.Drawing.Size(923, 455);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
