@@ -20,7 +20,13 @@ namespace PersonList
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataTable dt = DataContext.GetPersons("");
+            DataTable dt = DataContext.GetAllPersons();
+            dataGridView1.DataSource = dt;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            DataTable dt = DataContext.GetPersons(textBox1.Text);
             dataGridView1.DataSource = dt;
         }
     }
