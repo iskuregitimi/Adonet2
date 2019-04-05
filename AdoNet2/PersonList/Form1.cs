@@ -23,5 +23,15 @@ namespace PersonList
             DataTable dt = DataContext.GetPersons("");
             dataGridView1.DataSource = dt;
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

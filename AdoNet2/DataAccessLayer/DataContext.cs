@@ -13,6 +13,7 @@ namespace DataAccessLayer
         {
             //TODO: ismini verdiğim adamları bulsun.İsim boş ise hepsini getirsin. 
             return null;
+
         }
     }
 }
