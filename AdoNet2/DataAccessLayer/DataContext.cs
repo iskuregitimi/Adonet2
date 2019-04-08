@@ -47,7 +47,7 @@ namespace DataAccessLayer
             cmd.Parameters.AddWithValue("@Name",name);
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataReader dr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
+            DataTable dt = new DataTable("Person");
             dt.Load(dr);
             connect.Close();
             return dt;
@@ -69,13 +69,27 @@ namespace DataAccessLayer
                 person.FirstName=  dr["FirstName"].ToString();
                 person.MiddleName = dr["MiddleName"].ToString();
                 person.LastName = dr["LastName"].ToString();
-                person.PersonType = dr["PersonType"].ToString();
+              
 
                 isimler.Add(person);
             }
             dr.Close();
             connect.Close();
             return isimler;
+        }
+
+        public static DataTable GetPersonsDetail(int detay)
+        {
+            //TODO: ismini verdiğim adamları bulsun.İsim boş ise hepsini getirsin. 
+            connect.Open();
+            SqlCommand cmd = new SqlCommand("SELECT_PERSON_DETAIL", connect);
+            cmd.Parameters.AddWithValue("@BusinessEntityId", detay);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable("Person");
+            dt.Load(dr);
+            connect.Close();
+            return dt;
         }
     }
 }

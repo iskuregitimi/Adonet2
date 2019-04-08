@@ -16,7 +16,7 @@ namespace Entities
 
         public override string ToString()
         {
-            return  BusinessEntityId +"   "+ PersonType + " " + FirstName +" "+ MiddleName +" " + LastName;
+            return  BusinessEntityId +"   "+ FirstName +" "+ MiddleName +" " + LastName;
         }
     }
  

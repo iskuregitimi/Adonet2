@@ -19,6 +19,8 @@ namespace PersonList
             InitializeComponent();
         }
 
+        public static int detay;
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -38,6 +40,14 @@ namespace PersonList
             listBox1.DataSource=person;
 
 
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+            detay = Convert.ToInt32(dataGridView1[e.ColumnIndex,e.RowIndex].Value);
+            Form2 frm = new Form2(detay);
+            frm.Show();
         }
     }
 }
